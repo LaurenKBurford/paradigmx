@@ -1,0 +1,414 @@
+/* Grid Setup */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 0 1rem;
+  }
+
+  #side-section {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    max-height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+  }
+
+  #side-section img {
+      max-width: 100% !important;
+      height: auto;
+  }
+
+  #main-section {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    max-width: 100%;
+    height: 100vh;
+    font-family: Crimson, serif;
+    font-size: 22px;
+    font-weight: 400;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;  
+  }
+
+  #main-section img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  #lines {
+    position: relative;
+    top: -10px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  } 
+
+/* Colour Lines */
+
+.line {
+    float: left;
+    width: 5px;
+    height: 100vh;
+}
+
+.pink-line {
+    background-color: #fa7588;
+}
+.brown-line {
+    background-color: #5a4634;
+}
+.yellow-line {
+    background-color: #fed38a;
+}
+.green-line {
+    background-color: #c6db72;
+}
+.blue-line {
+    background-color: #54bd9d;
+}
+
+/* Text */
+
+#side-section {
+    font-family: Sen, sans-serif;
+    font-size: 20px;
+}
+
+#site-title {
+    margin: 0px;
+    text-transform: uppercase;
+    font-family: Anton, sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+#site-description {
+    margin: 0;
+    font-family: Sen, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-color: #fca103;
+    font-weight: 700;
+    color: #284b59;
+    transition: color .3s ease-in-out;
+}
+
+a:hover {
+    color: #c4023c;
+}
+
+h1,
+h2,
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: Sen, sans-serif;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 20px;
+}
+
+#main-section {
+    font-family: Crimson, serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#the-date p {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color:#2b3036;
+}
+
+#categories p,
+#comments-number p {
+    margin: 0;
+    font-size: 19px;
+}
+
+#comments-number p {
+    font-style: italic;
+}
+
+
+/* Side Section, Forms */
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    margin-top: 10px;
+    padding: 0 5px;
+    height: 2rem;
+    width: 95%;
+    border: 1px solid #5a756c;
+    background-color: #ddebe6;
+    color: #345f71;
+    font-size: 20px;
+}
+
+input[type="submit"] {
+    margin: 15px 0;
+    padding: 4px 8px;
+    border: 2px solid #fff;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #ddebe6;
+    color: #345f71;  
+    transition: border .3s ease-in-out;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    border: 2px solid  #c4023c;
+}
+
+label {
+    font-family: Sen, sans-serif;
+}
+
+select {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Misc */
+
+#float-right {
+    float: right;
+}
+
+#not-found {
+    font-family: Sen, sans-serif;
+    font-size: 40px;
+    color: #fa7588; 
+}
+
+label.screen-reader-text {
+    display: none;
+}
+
+.download-text {
+    font-size: 18px;
+}
+
+.archive-description {
+    color: #1b2838;
+}
+
+/* Comments Section */
+
+#comment-section {
+    margin-top: 5rem;
+}
+
+#comment-avatar {
+    display: inline-block;
+}
+
+#comment-date {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #2b3036;
+}
+
+#comment-author {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1b2838;
+}
+
+#comment-text {
+    color: #1b2838;
+}
+
+#respond {
+    margin-top: 5rem;
+}
+
+.comment-submit {
+    margin: 15px 0;
+    padding: 4px 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #ddebe6;
+    color: #345f71;
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+}
+
+.comment-submit:hover {
+    background-color: #83dec2;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+input,
+textarea {
+    padding: 5px;
+    max-width: 95% !important;
+    font-family: Sen, sans-serif;
+    font-size: 18px;
+}
+
+textarea {
+    height: 7rem;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 2001px) and (max-width: 4000px) {
+    .grid-container {
+        margin: 0 20rem;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    .grid-container {
+        margin: 0 10rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #site-title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    #site-description {
+        font-size: 17px;
+    }
+    #side-section {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    #main-section {
+        font-size: 20px;
+    }
+    #main-section p {
+        font-size: 18px;
+    }
+    #main-section h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #side-section {
+        grid-column-end: 8;
+    }
+    #lines {
+        margin-top: 1rem;
+        grid-column-start: 1;
+        grid-column-end: 8;  
+    }
+    .line {
+        position: relative;
+        left: -24px;
+        float: none;
+        height: 5px;
+        width: 100vw;
+    }
+    #main-section {
+        grid-column-start: 2;
+    }
+    #side-section input[type="text"],
+    select {
+        width: 35%;
+    }
+    #side-section p {
+        max-width: 45%;
+    }
+    #site-title {
+        font-size: 55px;
+        line-height: 55px;
+    }
+    #site-description {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #side-section input[type="text"],
+    select {
+        width: 45%;
+    }
+    #side-section p {
+        max-width: 55%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #side-section input[type="text"],
+    select {
+        width: 65%;
+    }
+    #side-section p {
+        max-width: 75%;
+    }
+    #main-section {
+        grid-column-start: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #side-section input[type="text"],
+    select {
+        width: 95%;
+    }
+    #side-section p {
+        max-width: 95%;
+    }
+    #main-section {
+        grid-column-end: 8;
+    }
+    #site-title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    #site-description {
+        font-size: 17px;
+    }
+}
